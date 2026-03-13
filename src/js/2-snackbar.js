@@ -33,4 +33,3 @@ form.addEventListener("submit", event => {
       });
     });
 });
-form.requestFullscreen();
