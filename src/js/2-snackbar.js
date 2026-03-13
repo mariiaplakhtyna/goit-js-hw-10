@@ -20,16 +20,15 @@ form.addEventListener("submit", event => {
   });
 
   promise
-    .then(delay => {
-      iziToast.success({
-        message: `Fulfilled promise in ${delay}ms`,
-        position: "topRight"
-      });
-    })
-    .catch(delay => {
-      iziToast.error({
-        message: `Rejected promise in ${delay}ms`,
-        position: "topRight"
-      });
+  .then(delay => {
+    iziToast.success({
+      message: `✅ Fulfilled promise in ${delay}ms`,
+      position: "topRight"
     });
-});
+  })
+  .catch(delay => {
+    iziToast.error({
+      message: `❌ Rejected promise in ${delay}ms`,
+      position: "topRight"
+    });
+  });
